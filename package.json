@@ -1,0 +1,38 @@
+{
+  "name": "@kooks-fe/kooks",
+  "version": "0.0.1",
+  "description": "Custom hooks made by Kwangmin and friend",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeeKwang-min/kooks.git"
+  },
+  "keywords": [
+    "kooks-fe",
+    "Custom hooks",
+    "React hooks"
+  ],
+  "author": {
+    "name": "LeeKwangmin",
+    "email": "dltkdtn56@naver.com",
+    "url": "https://kwangmin-portfolio.vercel.app/resume"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LeeKwang-min/kooks/issues"
+  },
+  "homepage": "https://github.com/LeeKwang-min/kooks#readme",
+  "peerDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.1",
+    "typescript": "^5.5.4"
+  }
+}
