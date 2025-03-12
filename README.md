@@ -29,7 +29,7 @@ Kooks의 소개와 패치노트도 함께 확인해 보세요!
     </td>
   </tr>
 </table>
-
+<br>
 <table>
   <tr>
     <td align="center">
@@ -54,6 +54,7 @@ Kooks의 소개와 패치노트도 함께 확인해 보세요!
     </td>
   </tr>
 </table>
+<br><br>
 
 ## License
 
