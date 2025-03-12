@@ -1,6 +1,6 @@
 {
   "name": "@kooks-fe/kooks",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Custom hooks made by Kwangmin and friend",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
