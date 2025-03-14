@@ -5,6 +5,7 @@
     "strict": true,
     "jsx": "preserve",
     "declaration": true,
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "lib": ["es2021", "dom"]
   }
 }
