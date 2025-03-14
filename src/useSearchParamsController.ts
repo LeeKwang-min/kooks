@@ -6,7 +6,7 @@ export type TSearchParamsValueType =
   | (number | string)[]
   | undefined;
 
-const useSearchParamsController = () => {
+export const useSearchParamsController = () => {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -67,5 +67,3 @@ const useSearchParamsController = () => {
     },
   };
 };
-
-export default useSearchParamsController;

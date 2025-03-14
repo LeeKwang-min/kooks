@@ -6,7 +6,7 @@ interface IProps {
   delay?: number;
 }
 
-const useLongPress = ({ onLongPress, onClick, delay = 300 }: IProps) => {
+export const useLongPress = ({ onLongPress, onClick, delay = 300 }: IProps) => {
   const [isLongPress, setIsLongPress] = useState(false);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -39,5 +39,3 @@ const useLongPress = ({ onLongPress, onClick, delay = 300 }: IProps) => {
     onTouchEnd: endPress,
   };
 };
-
-export default useLongPress;
