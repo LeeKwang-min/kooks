@@ -1,0 +1,7 @@
+{
+  "directory": ["./src/react", "./src/nextjs"],
+  "delete": true,
+  "barrelName": "index.ts",
+  "structure": "flat",
+  "exclude": ["index.ts"]
+}

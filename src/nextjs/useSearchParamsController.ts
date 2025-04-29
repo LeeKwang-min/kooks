@@ -1,10 +1,6 @@
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
-export type TSearchParamsValueType =
-  | string
-  | number
-  | (number | string)[]
-  | undefined;
+type TSearchParamsValueType = string | number | (number | string)[] | undefined;
 
 export const useSearchParamsController = () => {
   const router = useRouter();
