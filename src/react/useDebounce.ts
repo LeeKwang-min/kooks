@@ -1,46 +1,56 @@
-import { useEffect, useState } from "react";
+import { useCallback, useRef } from "react";
 
 /**
- * 입력값을 지정한 시간 동안 변경되지 않을 때만 업데이트하는 Hook
+ * 콜백 함수를 지정한 시간 동안 호출되지 않을 때만 실행하는 Hook
  *
- * @param value - 디바운스할 입력값
- * @param delay - 업데이트를 지연할 시간(ms)
- *   - 0 이하: 경고 메시지 출력 후 100ms로 설정
- *   - 양수: 지정된 시간 동안 변경이 없을 때 업데이트
+ * 이 훅은 연속된 함수 호출을 하나로 묶어 성능을 최적화합니다.
+ * 예를 들어, 사용자 입력이나 검색 API 호출과 같이 연속적인 이벤트를 처리할 때 유용합니다.
+ *
+ * @param callback - 디바운스할 콜백 함수
+ * @param delay - 실행을 지연할 시간(ms)
+ *   - 0 이하: 경고 메시지 출력 후 즉시 실행
+ *   - 양수: 지정된 시간 동안 호출이 없을 때만 실행
+ *
+ * @returns 디바운스된 함수. 이 함수는 원본 함수와 동일한 매개변수를 받지만,
+ *         delay 시간 동안 호출이 없을 때만 실행됩니다.
  *
  * @example
  * ```tsx
  * // 기본 사용
- * const [searchTerm, setSearchTerm] = useState("");
- * const debouncedSearchTerm = useDebounce(searchTerm, 500);
- *
- * // 검색 API 호출
- * useEffect(() => {
- *   if (debouncedSearchTerm) {
- *     searchAPI(debouncedSearchTerm);
- *   }
- * }, [debouncedSearchTerm]);
+ * const handleSearch = useDebounce((searchTerm: string) => {
+ *   // 검색 API 호출
+ *   searchAPI(searchTerm);
+ * }, 500);
  *
  * // 입력 필드
  * <input
  *   type="text"
- *   value={searchTerm}
- *   onChange={(e) => setSearchTerm(e.target.value)}
+ *   onChange={(e) => handleSearch(e.target.value)}
  * />
  * ```
  */
-export function useDebounce<T>(value: T, delay: number): T {
-  const [debouncedValue, setDebouncedValue] = useState(value);
+export function useDebounce<Args extends unknown[], Return>(
+  callback: (...args: Args) => Return,
+  delay: number
+): (...args: Args) => void {
+  const timeoutRef = useRef<NodeJS.Timeout | undefined>(undefined);
 
-  useEffect(() => {
-    if (delay <= 0) {
-      console.warn("useDebounce: delay must be a positive number");
-      return;
-    }
+  return useCallback(
+    (...args: Args) => {
+      if (delay <= 0) {
+        console.warn("useDebounce: delay must be a positive number");
+        callback(...args);
+        return;
+      }
 
-    const handler = setTimeout(() => setDebouncedValue(value), delay);
-    return () => clearTimeout(handler);
-  }, [value, delay]);
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
 
-  return debouncedValue;
+      timeoutRef.current = setTimeout(() => {
+        callback(...args);
+      }, delay);
+    },
+    [callback, delay]
+  );
 }
