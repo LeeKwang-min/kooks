@@ -41,7 +41,7 @@ Kooks에 Custom hook을 추가하고 싶으신 <b>멋쟁이 개발자분!</b> <b
       <br />
       <a href="https://github.com/pro-popo"><strong>pro-popo</strong></a>
     </td>
-    <td align="center">
+    <!-- <td align="center">
       <img src="https://github.com/JunseokPark13.png" width="100px;" alt=""/>
       <br />
       <a href="https://github.com/JunseokPark13"><strong>JunseokPark13</strong></a>
@@ -55,7 +55,7 @@ Kooks에 Custom hook을 추가하고 싶으신 <b>멋쟁이 개발자분!</b> <b
       <img src="https://github.com/yyoooon.png" width="100px;" alt=""/>
       <br />
       <a href="https://github.com/yyoooon"><strong>yyoooon</strong></a>
-    </td>
+    </td> -->
   </tr>
 </table>
 <br><br>
