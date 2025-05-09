@@ -1,6 +1,6 @@
 {
   "name": "@kooks-fe/kooks",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "description": "Custom hooks in React & Next.js made by Kwangmin and friend",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
