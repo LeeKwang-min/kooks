@@ -17,19 +17,16 @@ type KeyExtractor<T> = (item: T) => string | number;
  *
  * @example
  * // 기본 사용법 (item 자체를 키로 사용)
- * const { isDuplicated } = useIsDuplicatedUniversal([1, 2, 2, 3]);
+ * const { isDuplicated } = useIsDuplicated([1, 2, 2, 3]);
  *
  * @example
  * // keyExtractor 사용
- * const { isDuplicated } = useIsDuplicatedUniversal(
+ * const { isDuplicated } = useIsDuplicated(
  *   [{ id: 1 }, { id: 2 }, { id: 2 }],
  *   (item) => item.id
  * );
  */
-function useIsDuplicatedUniversal<T>(
-  checkList: T[],
-  keyExtractor?: KeyExtractor<T>
-) {
+function useIsDuplicated<T>(checkList: T[], keyExtractor?: KeyExtractor<T>) {
   const getKey =
     keyExtractor ?? ((item: T) => item as unknown as string | number);
 
@@ -86,4 +83,4 @@ function useIsDuplicatedUniversal<T>(
   };
 }
 
-export default useIsDuplicatedUniversal;
+export default useIsDuplicated;
