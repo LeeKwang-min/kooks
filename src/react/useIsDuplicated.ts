@@ -26,7 +26,10 @@ type KeyExtractor<T> = (item: T) => string | number;
  *   (item) => item.id
  * );
  */
-function useIsDuplicated<T>(checkList: T[], keyExtractor?: KeyExtractor<T>) {
+export function useIsDuplicated<T>(
+  checkList: T[],
+  keyExtractor?: KeyExtractor<T>
+) {
   const getKey =
     keyExtractor ?? ((item: T) => item as unknown as string | number);
 
