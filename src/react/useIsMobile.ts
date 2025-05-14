@@ -41,8 +41,6 @@ export function useIsMobile(width: number = 768): UseIsMobileResult {
     };
 
     updateStates(); // 최초 실행
-    window.addEventListener("resize", updateStates);
-    return () => window.removeEventListener("resize", updateStates);
   }, []);
 
   return { isMobile, isMobileByWidth };
