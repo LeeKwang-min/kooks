@@ -1,0 +1,37 @@
+name: 🐛 Bug Report
+description: 예상치 못한 동작이나 오류를 보고합니다.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: "감사합니다! 버그를 가능한 자세히 알려주세요 🙏"
+
+  - type: input
+    id: environment
+    attributes:
+      label: "환경"
+      description: 사용한 브라우저, 운영체제, Node.js 버전 등
+      placeholder: "예: macOS, Chrome 122, Node 18"
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "버그 설명"
+      description: 어떤 문제가 발생했는지 자세히 설명해주세요.
+      placeholder: "어떤 동작을 했을 때 어떤 결과가 나왔는지..."
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: "재현 방법"
+      description: 문제를 재현하는 방법을 단계별로 적어주세요.
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: "관련 로그 / 콘솔 에러"
+      render: shell
