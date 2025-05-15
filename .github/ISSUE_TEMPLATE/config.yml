@@ -1,19 +1,5 @@
 blank_issues_enabled: false # 빈 이슈 작성 비활성화
 
-template_chooser:
-  - name: 🐛 버그 리포트
-    description: 버그를 발견하셨나요? 알려주세요!
-    template: bug_report.yml
-  - name: ✨ 새로운 기능 제안
-    description: 프로젝트에 추가되었으면 하는 기능을 제안합니다.
-    template: feature_request.yml
-  - name: 🔄 리팩토링 제안
-    description: 코드 개선을 위한 제안을 해주세요.
-    template: refactor_proposal.yml
-  - name: ❓ 질문
-    description: 프로젝트에 대해 궁금한 점이 있으신가요?
-    template: question.yml
-
 contact_links:
   - name: 📣 일반 문의는 Discussions에서
     url: https://github.com/LeeKwang-min/kooks/discussions
