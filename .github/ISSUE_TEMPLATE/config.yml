@@ -1,6 +1,0 @@
-blank_issues_enabled: false # 빈 이슈 작성 비활성화
-
-contact_links:
-  - name: 📣 일반 문의는 Discussions에서
-    url: https://github.com/LeeKwang-min/kooks/discussions
-    about: 질문이나 일반적인 논의는 Discussions 탭을 이용해주세요.
