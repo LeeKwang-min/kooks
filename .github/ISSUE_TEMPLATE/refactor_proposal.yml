@@ -1,0 +1,29 @@
+name: Refactoring
+description: 코드 리팩토링이나 구조 개선 아이디어를 제안합니다.
+labels: [리팩토링]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        코드 품질을 높이기 위한 제안을 환영합니다!  
+        단순 스타일 변경보다는 구조적 개선에 초점을 맞춰주세요.
+
+  - type: input
+    id: location
+    attributes:
+      label: 개선이 필요한 코드 위치
+      placeholder: "예: /hooks/useExample.ts"
+
+  - type: textarea
+    id: current
+    attributes:
+      label: 현재 문제점
+      description: 현재 코드의 어떤 점이 문제라고 생각하시나요?
+      placeholder: "복잡성, 중복, 네이밍, 테스트 등"
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: 제안하는 개선 방향
+      description: 구체적인 리팩토링 아이디어나 구조 변경 방안을 제시해주세요.
+      placeholder: "코드 예시나 설계 제안이 있으면 더 좋아요!"

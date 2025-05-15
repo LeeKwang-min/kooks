@@ -1,6 +1,6 @@
-name: ✨ 새로운 기능 제안
+name: New_Feature
 description: 프로젝트에 추가되었으면 하는 기능을 제안합니다.
-labels: [enhancement]
+labels: [기능제안]
 body:
   - type: markdown
     attributes:
