@@ -1,5 +1,5 @@
 name: ❓ 질문 또는 문의
-description: 라이브러리 사용 중 궁금한 점이나 문의사항을 남겨주세요.
+description: 프로젝트에 대해 궁금한 점이나 문의사항을 남겨주세요.
 labels: [question]
 body:
   - type: markdown
