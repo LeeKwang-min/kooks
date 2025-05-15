@@ -1,4 +1,4 @@
-name: Bug_Report
+name: 🐛 버그 리포트
 description: 예상치 못한 동작이나 오류를 보고합니다.
 labels: [버그]
 body:

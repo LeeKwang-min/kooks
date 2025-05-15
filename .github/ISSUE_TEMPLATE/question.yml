@@ -1,4 +1,4 @@
-name: Question
+name: ❓ 질문 또는 문의
 description: 프로젝트에 대해 궁금한 점이나 문의사항을 남겨주세요.
 labels: [질문]
 body:
@@ -26,4 +26,3 @@ body:
     attributes:
       label: 관련 코드나 설정
       render: typescript
-      optional: true

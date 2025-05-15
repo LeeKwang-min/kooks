@@ -1,4 +1,4 @@
-name: Refactoring
+name: 🧹 코드 개선 제안
 description: 코드 리팩토링이나 구조 개선 아이디어를 제안합니다.
 labels: [리팩토링]
 body:
